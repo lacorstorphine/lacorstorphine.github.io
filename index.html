@@ -15,14 +15,20 @@
             line-height: 1.6;
         }
 
-        /* CHANGED: Header alignment set to Left */
+        /* Adjusted Header for Alignment */
         header {
-            padding: 60px 40px 40px 40px; /* Top, Right, Bottom, Left */
-            text-align: left; /* Aligns text to the left */
+            padding: 80px 0 20px 0; /* Vertical padding */
             background: #0c0c0c;
         }
 
-        /* CHANGED: Removed uppercase for a cleaner left-aligned look */
+        /* This container ensures text lines up with the video grid */
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+            text-align: left;
+        }
+
         h1 { 
             margin: 0; 
             font-size: 2.4rem; 
@@ -31,7 +37,6 @@
             color: #fff;
         }
 
-        /* Subtitle sits directly below */
         .subtitle { 
             color: #888; 
             font-size: 1rem; 
@@ -42,7 +47,7 @@
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 40px 40px 40px;
+            padding: 40px; /* Horizontal padding matches header-content */
         }
 
         .video-grid {
@@ -102,10 +107,11 @@
         }
 
         footer {
-            text-align: left; /* Matches the header */
+            max-width: 1200px;
+            margin: 0 auto;
             padding: 60px 40px;
             border-top: 1px solid #1a1a1a;
-            margin-top: 60px;
+            text-align: left;
         }
 
         .contact-btn {
@@ -123,7 +129,7 @@
 
         @media (max-width: 768px) {
             .video-grid { grid-template-columns: 1fr; }
-            header, .container, footer { padding: 40px 20px; }
+            .header-content, .container, footer { padding: 40px 20px; }
             h1 { font-size: 1.8rem; }
         }
     </style>
@@ -131,8 +137,10 @@
 <body>
 
 <header>
-    <h1>Lindsay Corstorphine</h1>
-    <p class="subtitle">Director • Editor • Creative Producer</p>
+    <div class="header-content">
+        <h1>Lindsay Corstorphine</h1>
+        <p class="subtitle">Director • Editor • Creative Producer</p>
+    </div>
 </header>
 
 <div class="container">
@@ -145,7 +153,7 @@
             <div class="video-info">
                 <span class="role-tag">Director / Editor</span>
                 <h3>Aldean - Lip Out</h3>
-                <p class="video-description">Cinematic music video project focusing on rhythmic editing and high-contrast visual storytelling.</p>
+                <p class="video-description">New Age-style music video project focusing on rhythmic editing and high-contrast visual storytelling.</p>
             </div>
         </div>
 
@@ -167,7 +175,7 @@
             <div class="video-info">
                 <span class="role-tag">Editor</span>
                 <h3>‘Homewalk’</h3>
-                <p class="video-description">Professional property showcase featuring smooth camera movement and clean, architectural pacing.</p>
+                <p class="video-description">An explainer video for an exercise in domestic 'deep listening'.</p>
             </div>
         </div>
 
@@ -189,7 +197,7 @@
             <div class="video-info">
                 <span class="role-tag">Editor / Motion Graphics</span>
                 <h3>‘Zoom Top Tips’</h3>
-                <p class="video-description">Educational training content designed for corporate environments with clear information delivery.</p>
+                <p class="video-description">An explainer video made for participants of the Beautiful Octopus Club, held online on Zoom.</p>
             </div>
         </div>
 
@@ -200,7 +208,7 @@
             <div class="video-info">
                 <span class="role-tag">Director / Editor</span>
                 <h3>Grazia - Cheap</h3>
-                <p class="video-description">Official music video for London duo Grazia. Homage to kitsch and 80s new-wave aesthetic.</p>
+                <p class="video-description">Official music video for London punk duo Grazia. Homage to kitsch and 80s new-wave aesthetic.</p>
             </div>
         </div>
 
@@ -219,8 +227,10 @@
 </div>
 
 <!-- <footer>
-    <p>Available for freelance projects and collaborations.</p>
-    <a href="mailto:yourname@email.com" class="contact-btn">Get In Touch</a>
+    <div class="footer-content">
+        <p>Available for freelance projects and collaborations.</p>
+        <a href="mailto:yourname@email.com" class="contact-btn">Get In Touch</a>
+    </div>
 </footer> -->
 
 </body>
